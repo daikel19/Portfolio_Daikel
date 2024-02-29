@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
 /* Reset */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+html{
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,*::before, *::after{
+  box-sizing: inherit;
+}
   
   body {
     font-family: Arial, sans-serif;
     color: #fff;
     background-color: #000;
-    scroll-behavior: smooth;
+    margin: 0% auto;
+    justify-content: center;
     font-family: "Merriweather", serif;
     font-style: normal;
   }
@@ -19,6 +23,8 @@
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 2.5rem;
+    padding: 3rem;
   }
   
   /* Header */
@@ -31,7 +37,7 @@
   .header__title {
     font-size: 2rem;
     text-align: center;
-    padding: 1rem;
+ 
 
   }
   
@@ -55,140 +61,228 @@
     color: #aaa;
   }
 
-  .insta{
-    background-color: #fff;
-    width: 2rem;
+  /*Iconos*/
+
+  .iconos{
     
   }
+  .insta{
+    background-color: #fff;
+    float: right;
+    width: 35px;
+    border-radius: 2rem;
+    margin: 0.3rem;
+    
+  }
+
+  .gmail{
+    background-color: #fff;
+    width: 35px;
+    float: right;
+    border-radius: 2rem;
+    margin: 0.3rem;
+  }
   
+  .github{
+    width: 35px;
+    float: right;
+    margin: 0.3rem;
+  }
+
   /* Section */
   .section {
     padding: 80px 0;
-  }
-  
-  .section__title {
-    font-size: 2rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section__title {
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 40px;
-  }
-  
-  .section__content {
+    color: #fff;
+    /* Título en color blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Sombra en el título */
+}
+
+.section__content {
     text-align: center;
-  }
-  
-  /* Skills */
-  .skills {
+    color: #ccc;
+    /* Contenido en color gris claro */
+}
+
+/* Efecto de onda para los enlaces */
+a {
+    position: relative;
+    overflow: hidden;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    /* Línea blanca */
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Estilos específicos para las habilidades */
+.skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  
-  .skill {
+}
+
+.skill {
     flex: 0 1 calc(33.33% - 20px);
     margin-bottom: 40px;
     padding: 20px;
-    background-color: #222;
+    background-color: #111;
+    /* Fondo de habilidad en negro */
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    /* Sombra en blanco */
     text-align: center;
-  }
-  
-  .skill__title {
-    font-size: 1.2rem;
-  }
-  
-  .skill-bar {
-    background-color: #444;
-    height: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 10px;
-  }
-  
-  .skill-bar.html { width: 90%; }
-  .skill-bar.css { width: 85%; }
-  .skill-bar.js { width: 80%; }
-  
-  .skill-bar.html { animation: skillFillHtml 2s ease; }
-  .skill-bar.css { animation: skillFillCss 2s ease; }
-  .skill-bar.js { animation: skillFillJs 2s ease; }
-  
-  @keyframes skillFillHtml {
-    0% { width: 0; }
-    100% { width: 90%; }
-  }
-  
-  @keyframes skillFillCss {
-    0% { width: 0; }
-    100% { width: 85%; }
-  }
-  
-  @keyframes skillFillJs {
-    0% { width: 0; }
-    100% { width: 80%; }
-  }
-  
-  /* Projects */
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  .project {
     position: relative;
     overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.1);
+    /* Elevación en blanco */
+}
+
+.skill__title {
+    font-size: 1.4rem;
+    color: #fff;
+    /* Título de habilidad en blanco */
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background-color: #222;
+    /* Fondo de la barra de habilidad */
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project:hover:before {
+    overflow: hidden;
+}
+
+.skill-bar::before {
     content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--level);
+    height: 100%;
+    background-color: #f39c12;
+    /* Color de la barra de habilidad */
+    transition: width 1s ease;
+    /* Transición más lenta */
+}
+
+/* Estilos específicos para los proyectos */
+.projects {
+    display: grid;
+    gap: 20px;
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    /* Sombra en blanco */
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.1);
+    /* Elevación en blanco */
+}
+
+.project img {
+    width: 300px;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+}
+
+.project__details {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    transition: opacity 0.3s ease;
-  }
-  
-  .project:hover .project__details {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
-  
-  .project__details {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo del detalle en negro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
-    text-align: center;
-    z-index: 2;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  
-  .project__title {
-    font-size: 1.2rem;
+    transition: opacity 0.3s ease;
+}
+
+.project:hover .project__details {
+    opacity: 1;
+}
+
+.project__title {
+    font-size: 1.4rem;
+    color: #fff;
+    /* Título de proyecto en blanco */
     margin-bottom: 10px;
-  }
-  
-  .project__description {
-    font-size: 0.9rem;
-  }
-  
-  /* Contact */
-  .contact__list {
+}
+
+.project_manage{
+  width: 300px;
+}
+
+.project_fourcard{
+  width: 300px;
+}
+
+/* Estilos específicos para el contacto */
+.contact__list {
     list-style: none;
     text-align: center;
-  }
-  
-  .contact__item {
+}
+
+.contact__item {
     margin-bottom: 10px;
-  }
-  
+}
+
+.contact__item a {
+    color: #fff;
+    /* Color de enlaces de contacto en blanco */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact__item a:hover {
+    color: #ccc;
+    /* Color de enlaces de contacto en gris claro al hacer hover */
+}
   .footer {
     background-color: #000;
     color: #999;
