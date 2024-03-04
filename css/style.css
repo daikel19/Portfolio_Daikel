@@ -37,12 +37,6 @@ body {
   background-color: #000;
 }
 
-@media (min-width: 768px){
-  .header .button{
-  
-  }
-}
-
 .header .nav {
   width: 100%;
   display: none;
@@ -100,9 +94,6 @@ body {
 
 /*Iconos*/
 
-.iconos {}
-
-
 .gmail {
   width: 20px;
   float: right;
@@ -149,7 +140,7 @@ body {
 .section__content {
   text-align: center;
   color: #ccc;
-  /* Contenido en color gris claro */
+
 }
 
 /* Efecto de onda para los enlaces */
@@ -188,19 +179,6 @@ a:hover::before {
 }
 
 /* Estilos específicos para las habilidades */
-.skills {}
-
-
-
-
-
-.skill {
-
-
-  /* Fondo de habilidad en negro */
-
-
-}
 
 .back {
   margin-left: auto;
@@ -245,7 +223,7 @@ a:hover::before {
   margin-bottom: 10px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 720px) {
   .skills {
     display: flex;
     justify-content: space-around;
@@ -286,11 +264,7 @@ a:hover::before {
 }
 
 
-
-
 .project {
-  /* overflow: hidden; */
-
   box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
   /* Sombra en blanco */
   transition: transform 0.3s ease;
@@ -302,14 +276,6 @@ a:hover::before {
   /* Elevación en blanco */
 }
 
-.project img {
-  /* height: */
-  /* display: block; */
-  
-}
-
-
-
 .project:hover .project__details {
   opacity: 1;
 }
@@ -317,20 +283,20 @@ a:hover::before {
 .project__title {
   font-size: 1.4rem;
   color: #fff;
-  /* Título de proyecto en blanco */
+  /* Título proyecto en blanco */
   margin-bottom: 10px;
 }
 
 
 
 .project_manage {
-  margin: 0 auto;
   width: 425px;
+  margin: 0 auto;
 }
 
 .project_fourcard {
-  margin: 0 auto;
   width: 425px;
+  margin: 0 auto;
 
 }
 
@@ -338,13 +304,13 @@ a:hover::before {
 
 .project-links a {
   text-decoration: none;
-  color: #fff;
-  letter-spacing: 2.29px;
+  font-weight: 700;
   line-height: 24px;
   font-size: 16px;
-  font-weight: 700;
-  padding-bottom: 10px;
+  letter-spacing: 2.29px;
   border-bottom: 2px solid;
+  padding-bottom: 10px;
+  color: #fff;
 
 }
 
@@ -373,7 +339,7 @@ a:hover::before {
 
 
 
-/* Estilos específicos para el contacto */
+/* Estilos para el contacto */
 
 .formulario {
   background-color: var(--blanco);
@@ -402,8 +368,6 @@ a:hover::before {
 .campo__field--textarea {
   height: 20rem;
 }
-
-
 
 .error {
   background-color: rgba(255, 0, 0, 0.466);
