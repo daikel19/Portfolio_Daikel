@@ -1,0 +1,29 @@
+{
+    "titulo":"Projectos Destacadados",
+    "Viewproject":"View project",
+    "projectos":[
+        {
+            "img":"./imagenes/Screenshot_9.png",
+            "enlace1":"#",
+            "enlace2":"https://github.com/daikel19/manage-landing-page-master.git"
+
+
+        },
+        {
+            "img":"./imagenes/Screenshot_10.png",
+            "enlace1":"https://daikel19.github.io/fourcardexamen/",
+            "enlace2":"https://github.com/daikel19/fourcardexamen.git" 
+        }
+    ]
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -137,6 +137,49 @@ body {
   /* Sombra en el título */
 }
 
+/* Empieza animacion de rotación */
+
+
+.rotacion p{
+  font-size: 2.5em;
+  color: #fff;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+.rotacion h2{
+  color: #fff;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+
+.rotacion h2{
+  animation-name: rotating-text-2;
+}
+
+.rotacion p:nth-child(2) {
+  animation-name: rotating-text-2;
+}
+
+
+@keyframes rotating-text-2 {
+  33% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  66% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  67% {
+    opacity: 0;
+  }
+}
+/* Termina animación */
+
 .section__content {
   text-align: center;
   color: #ccc;
