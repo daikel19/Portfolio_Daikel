@@ -1,4 +1,3 @@
-// /* Cuando hago CLICK .button, .nav TOGGLE 'activo' */
 const button = document.querySelector('.button')
 const nav    = document.querySelector('.nav')
 

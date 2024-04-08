@@ -67,8 +67,6 @@ body {
 .header__title {
   font-size: 2rem;
   text-align: center;
-
-
 }
 
 .ul {
@@ -97,6 +95,7 @@ body {
     display: flex;
     text-align: center;
     flex-direction: row;
+    pointer-events: auto;
     justify-content: space-between;
     width: 60%;
     min-width: 45rem;
@@ -120,6 +119,15 @@ body {
 }
 
 /*Iconos*/
+
+.Tresd{
+  display: flex;
+  flex-direction: row;
+}
+
+.tresD{
+  width: 40rem;
+}
 
 .gmail {
   width: 20px;
@@ -171,40 +179,42 @@ body {
   font-size: 2.5em;
   color: #fff;
   animation-duration: 6s;
-  animation-iteration-count: infinite;
+  
   opacity: 0;
 }
 
 .rotacion h2{
   color: #fff;
   animation-duration: 6s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   opacity: 0;
+  
 }
 
 
 .rotacion h2{
   animation-name: rotating-text-2;
+  
 }
 
 .rotacion p:nth-child(2) {
   animation-name: rotating-text-2;
+  
 }
 
 
 @keyframes rotating-text-2 {
   33% {
     transform: translateY(100%);
-    opacity: 0;
   }
   66% {
     transform: translateY(0);
     opacity: 1;
   }
-  67% {
-    opacity: 0;
-  }
+  
 }
+
+
 /* Termina animación */
 
 .section__content {
