@@ -52,7 +52,7 @@ function populateDiv(jsonObj) {
     div2.classList.add("projects")
     div.appendChild(div2)
 
-    for (let index = 0; index < 1; index++) {
+    for (let index = 0; index < listProyect.length; index++) {
         console.log("hola")
         //Crear Div3
         const div3 = document.createElement("div")
@@ -71,8 +71,15 @@ function populateDiv(jsonObj) {
         div3.appendChild(div4)
 
         //Añadir links
-        const ahref = document.createElement("ahref")
-        ahref.href = '<https://github.com/daikel19/manage-landing-page-master.git>'
+        const ahref = document.createElement("a")
+        ahref.href = listProyect[index]["enlace2"]
+        ahref.textContent = "View code"
+        div4.appendChild(ahref)
+
+        const href = document.createElement("a")
+        href.href = listProyect[index]["enlace1"]
+        href.textContent = "View project"
+        div4.appendChild(href)
         
     }
     
